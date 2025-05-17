@@ -3,9 +3,15 @@
 <!--Menu nivel 1-->
     <menuitem id="estate_property_menu_root" name="Real Estate"/>
 <!--Menu nivel 2-->
-    <menuitem id="estate_property_advertisemenst_menu" name="Advertisements" parent="estate_property_menu_root">
-<!-- Menu Nivel3-->    
-        <menuitem id="estate_property_menu_action" name="Properties" action="estate_property_action"/>    
+    <menuitem id="estate_property_advertisemenst_menu" name="Advertisements" parent="estate_property_menu_root">  
+
+        <menuitem id="estate_property_menu_action" name="Properties" action="estate_property_action"/>  
+
     </menuitem>
 
+<!--New menu lvl 2-->
+    <menuitem id="estate_property_settings_menu" name="Settings" parent="estate_property_menu_root">
+        <!--Menu nivel 3--> 
+        <menuitem id="estate_property_type_menu_settings" name="Property Types" action="estate_property_type_action"/>
+    </menuitem>
 </odoo>
