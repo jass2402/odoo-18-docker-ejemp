@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="model_user_task" model="ir.model">
+            <field name="name">Tarea de Usuario</field>
+            <field name="model">user.task</field>
+        </record>
+    </data>
+</odoo>
