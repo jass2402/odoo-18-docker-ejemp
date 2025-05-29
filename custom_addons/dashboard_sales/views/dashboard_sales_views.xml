@@ -1,0 +1,25 @@
+<odoo>
+    <record id="view_sales_order_graph_dashboard" model="ir.ui.view">
+        <field name="name">sale.order.graph.dashboard</field>
+        <field name="model">sale.order</field>
+        <field name="arch" type="xml">
+            <graph string="Ventas por mes" type="bar" stacked="1">
+                <field name="date_order" type="row"/>
+                <field name="amount_total" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_sale_order_graph_order" model="ir.actions.act_window">
+        <field name="name">Graficos: Ventas por mes</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="view_sales_order_graph_dashboard"/>
+        <field name="context" eval="{'search_default_group_by_date_order': 1}"/>
+    </record>
+
+    <menuitem id="menu_dashboard_sales_root" name="Dashboard Ventas" sequence="10"/>
+    <menuitem id="menu_dashboard_sales_graph" name="Grafico de Ventas" 
+    parent="menu_dashboard_sales_root" action="action_sale_order_graph_order" sequence="20"/>
+
+</odoo>
